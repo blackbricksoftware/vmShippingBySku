@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="vmshipment" method="upgrade">
+	<name>VM Shipping By Sku</name>
+	<creationDate>August 2012</creationDate>
+	<copyright>Black Brick Software LLC</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<author>Black Brick Software LLC</author>
+    <authorEmail>david@blackbricksoftware.com</authorEmail>
+    <authorUrl>https://blackbricksoftware.com</authorUrl>
+	<version>1.0.0</version>
+	<description>This plugin allows the specification of shipping prices based on location and SKU number.</description>
+	<files>
+		<filename plugin="vmShippingBySku">vmShippingBySku.php</filename>
+		<filename>index.html</filename>
+		<filename>LICENSE.GPL</filename>
+		<folder>elements</folder>
+		<folder>language</folder>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_vmshipment_vmShippingBySku.ini</language>
+		<language tag="en-GB">en-GB.plg_vmshipment_vmShippingBySku.sys.ini</language>
+	</languages>
+	<params addpath="/administrator/components/com_virtuemart/elements" />
+	<params addpath="/plugins/vmshipment/vmShippingBySku/elements" />
+	<params>
+		<param type="vmjpluginwarning" />
+		<param type="spacer" default="VM_SHIPPING_BY_SKU_PLUGIN" level="level1" />
+		<param	name="shipment_logos" type="vmfiles" label="VM_SHIPPING_BY_SKU_LOGOS" description="VM_SHIPPING_BY_SKU_LOGOS_DESC" directory="/images/stories/virtuemart/shipment" default="default" hide_default="1" hide_none="1" stripext="0"   exclude="^_" />
+		<param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VM_SHIPPING_BY_SKU_COUNTRIES" description="VM_SHIPPING_BY_SKU_COUNTRIES_DESC"/>
+		<param name="states" type="vmstates"  scope="com_virtuemart" default="" label="VM_SHIPPING_BY_SKU_STATES" description="VM_SHIPPING_BY_SKU_STATES_DESC"/>
+		<param name="sku_rules" type="textarea" rows="10" cols="30" default="" label="VM_SHIPPING_BY_SKU_SKU_RULES" description="VM_SHIPPING_BY_SKU_SKU_RULES_DESC"/>
+		<param name="zip_start" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_ZIP_START" description="VM_SHIPPING_BY_SKU_ZIP_START_DESC"/>
+		<param name="zip_stop" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_ZIP_STOP" description="VM_SHIPPING_BY_SKU_ZIP_STOP_DESC"/>
+		<param name="weight_start" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_WEIGHT_START" description="VM_SHIPPING_BY_SKU_WEIGHT_START_DESC"/>
+		<param name="weight_stop" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_WEIGHT_STOP" description="VM_SHIPPING_BY_SKU_WEIGHT_STOP_DESC"/>
+		<param name="weight_unit" type="vmweightunit" size="10" default="LB" label="VM_SHIPPING_BY_SKU_WEIGHT_UNIT" description="VM_SHIPPING_BY_SKU_WEIGHT_UNIT_DESC"/>
+		<param name="nbproducts_start" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_NBPRODUCTS_START" description="VM_SHIPPING_BY_SKU_NBPRODUCTS_START_DESC"/>
+		<param name="nbproducts_stop" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_NBPRODUCTS_STOP" description="VM_SHIPPING_BY_SKU_NBPRODUCTS_STOP_DESC"/>
+		<param name="orderamount_start" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_ORDERAMOUNT_START" description="VM_SHIPPING_BY_SKU_ORDERAMOUNT_START_DESC"/>
+		<param name="orderamount_stop" type="text" size="10" default="" label="VM_SHIPPING_BY_SKU_ORDERAMOUNT_STOP" description="VM_SHIPPING_BY_SKU_ORDERAMOUNT_STOP_DESC"/>
+		<param name="free_shipment" type="text" label="VM_SHIPPING_BY_SKU_FREE_SHIPPING_AMOUNT" description="VM_SHIPPING_BY_SKU_FREE_SHIPPING_AMOUNT_DESC" />
+		<param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VM_SHIPPING_BY_SKU_SHIPPING_TAX" description="VM_SHIPPING_BY_SKU_SHIPPING_TAX_DESC" />
+	</params>
+</extension>
